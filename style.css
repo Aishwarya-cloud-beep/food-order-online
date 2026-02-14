@@ -1,0 +1,285 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Body */
+body {
+    background: linear-gradient(135deg, #dff5f1, #ffffff);
+    padding: 15px;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+header h1 {
+    font-size: 32px;
+    color: #1b4332;
+}
+
+header p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Container */
+.container {
+    max-width: 700px;
+    margin: auto;
+}
+
+/* Category Card */
+.category {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 15px;
+    margin-bottom: 25px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* 🔥 IMAGE SIZE FIX 🔥 */
+.category img {
+    width: 100%;
+    height: 150px;      /* 👈 SMALL HEIGHT */
+    object-fit: cover;  /* prevents stretching */
+    border-radius: 12px;
+    margin-bottom: 12px;
+}
+
+/* Category Title */
+.category h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #2d6a4f;
+}
+
+/* Menu Items */
+.item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px dashed #ddd;
+    font-size: 15px;
+}
+
+.item:last-child {
+    border-bottom: none;
+}
+
+.item span:last-child {
+    font-weight: 600;
+    color: #1b4332;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 14px;
+    color: #444;
+}
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.category {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 15px;
+    margin-bottom: 25px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+
+    /* 🔥 Animation */
+    animation: fadeUp 0.8s ease forwards;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Lift Effect */
+.category:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 35px rgba(0,0,0,0.15);
+}
+.category img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 12px;
+
+    transition: transform 0.4s ease;
+}
+
+/* Zoom effect */
+.category:hover img {
+    transform: scale(1.05);
+}
+.item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px dashed #ddd;
+    font-size: 15px;
+
+    transition: transform 0.2s ease;
+}
+
+.item:hover {
+    transform: translateX(5px);
+}
+/* 🌈 Live Animated Background */
+body {
+    background: linear-gradient(
+        -45deg,
+        #d8f3dc,
+        #b7e4c7,
+        #95d5b2,
+        #dff5f1
+    );
+    background-size: 400% 400%;
+    animation: gradientMove 12s ease infinite;
+}
+
+/* Background Animation */
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+/* Floating light circles */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background:
+        radial-gradient(circle at 20% 30%, rgba(255,255,255,0.35), transparent 40%),
+        radial-gradient(circle at 80% 70%, rgba(255,255,255,0.25), transparent 40%);
+    animation: floatBg 15s infinite alternate;
+    z-index: -1;
+}
+
+@keyframes floatBg {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(-30px);
+    }
+}
+
+.logo {
+    width: 260px;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+header {
+    text-align: center;
+}
+.logo {
+    width: 220px;
+    max-width: 80%;
+    height: auto;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+/* Hover Zoom Effect */
+.logo:hover {
+    transform: scale(1.12);
+}
+
+/* Initially hidden */
+.category {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: all 0.6s ease;
+}
+
+/* When visible on screen */
+.category.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+/* Scrollbar width */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Scrollbar Track */
+::-webkit-scrollbar-track {
+    background: #e9f5f2;
+}
+
+/* Scrollbar Handle */
+::-webkit-scrollbar-thumb {
+    background: #2d6a4f;
+    border-radius: 10px;
+}
+
+/* Hover effect */
+::-webkit-scrollbar-thumb:hover {
+    background: #1b4332;
+}
+body {
+    -webkit-overflow-scrolling: touch;
+}
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #2d6a4f, #40916c);
+}
+
+
+footer {
+    margin-top: 40px;
+    padding: 20px 10px;
+    text-align: center;   /* This centers it */
+    font-size: 14px;
+    color: #444;
+}
+
+.thanks {
+    font-weight: 500;
+}
+
+.developer {
+    margin-top: 10px;
+    font-size: 13px;
+    color: #555;
+}
+
+.developer strong {
+    color: #2d6a4f;
+}
+
+.dev-email {
+    margin-top: 10px;
+    font-size: 13px;
+    color: #555;
+}
+
+.dev-email strong {
+    color: #2d6a4f;
+}
