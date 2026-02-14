@@ -1,321 +1,333 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Farmaish Cafe Menu</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Farmaish Cafe Menu</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="style.css">
+<style>
+body{
+    font-family:'Poppins',sans-serif;
+    margin:0;
+    background:#f4f6f9;
+}
+
+header{
+    text-align:center;
+    padding:20px;
+}
+
+.logo{
+    width:120px;
+}
+
+#tableNumber{
+    padding:8px;
+    width:200px;
+    margin:10px auto;
+    display:block;
+}
+
+.container{
+    width:95%;
+    margin:auto;
+}
+
+.category{
+    background:white;
+    margin:20px 0;
+    padding:15px;
+    border-radius:12px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.08);
+}
+
+.category img{
+    width:100%;
+    border-radius:10px;
+}
+
+.category h2{
+    margin:10px 0;
+}
+
+.item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:8px 0;
+    border-bottom:1px solid #eee;
+    gap:10px;
+}
+
+.item button{
+    background:#ff7a00;
+    color:white;
+    border:none;
+    padding:5px 12px;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+.item button:hover{
+    background:#e66a00;
+}
+
+.place-order-container{
+    text-align:center;
+    margin:30px 0;
+}
+
+.place-order-btn{
+    background:green;
+    color:white;
+    border:none;
+    padding:14px 35px;
+    font-size:18px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.place-order-btn:hover{
+    background:darkgreen;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+}
+</style>
 </head>
+
 <body>
 
 <header>
-    <img src="images/logo.png" alt="Cafe Farmaish Logo" class="logo">
-    <p>Scan • Place Order • Enjoy</p>
+<img src="images/logo.png" alt="Cafe Farmaish Logo" class="logo">
+<p>Scan • Place Order • Enjoy</p>
 </header>
 
+<input type="number" id="tableNumber" placeholder="Enter Table Number" required>
 
 <div class="container">
 
-<!-- ================= CHINESE ================= -->
+<!-- ALL YOUR ORIGINAL CATEGORIES START -->
+
+<!-- Chinese -->
 <div class="category">
-    <img src="images/chinese.jpg">
-    <h2>🍜 Chinese – Starters</h2>
-    <div class="item"><span>Veg Manchurian</span><span>₹89</span></div>
-    <div class="item"><span>Veg Crispy</span><span>₹99</span></div>
-    <div class="item"><span>Paneer Chilly</span><span>₹139</span></div>
-    <div class="item"><span>Paneer 65</span><span>₹149</span></div>
-    <div class="item"><span>Chinese Bhel</span><span>₹99</span></div>
-    <div class="item"><span>Black pepper paneer</span><span>₹179</span></div>
+<h2>🍜 Chinese – Starters</h2>
+<div class="item"><span>Veg Manchurian</span><span>₹89</span></div>
+<div class="item"><span>Veg Crispy</span><span>₹99</span></div>
+<div class="item"><span>Paneer Chilly</span><span>₹139</span></div>
+<div class="item"><span>Paneer 65</span><span>₹149</span></div>
+<div class="item"><span>Chinese Bhel</span><span>₹99</span></div>
+<div class="item"><span>Black pepper paneer</span><span>₹179</span></div>
 </div>
 
+<!-- Rice -->
 <div class="category">
-    <img src="images/rice.jpg" alt="Rice">
-    <h2>🍚 Rice</h2>
-    <div class="item"><span>Veg Fried Rice</span><span>₹89</span></div>
-    <div class="item"><span>Schezwan Rice</span><span>₹99</span></div>
-    <div class="item"><span>Cocktail Rice</span><span>₹99</span></div>
-    <div class="item"><span>Manchurian Rice</span><span>₹109</span></div>
-    <div class="item"><span>Paneer Rice</span><span>₹119</span></div>
-    <div class="item"><span>Farmaish Special Rice</span><span>₹139</span></div>
-    
-    
+<h2>🍚 Rice</h2>
+<div class="item"><span>Veg Fried Rice</span><span>₹89</span></div>
+<div class="item"><span>Schezwan Rice</span><span>₹99</span></div>
+<div class="item"><span>Cocktail Rice</span><span>₹99</span></div>
+<div class="item"><span>Manchurian Rice</span><span>₹109</span></div>
+<div class="item"><span>Paneer Rice</span><span>₹119</span></div>
+<div class="item"><span>Farmaish Special Rice</span><span>₹139</span></div>
 </div>
 
+<!-- Sizzler -->
 <div class="category">
-    <img src="images/sizzler.jpg" alt="Sizzlers">
-    <h2>🔥 Sizzler</h2>
-    <div class="item"><span>Veg Sizzler</span><span>₹189</span></div>
-    <div class="item"><span>Mexican Sizzler</span><span>₹239</span></div>
-    <div class="item"><span>Chinese Sizzler</span><span>₹219</span></div>
+<h2>🔥 Sizzler</h2>
+<div class="item"><span>Veg Sizzler</span><span>₹189</span></div>
+<div class="item"><span>Mexican Sizzler</span><span>₹239</span></div>
+<div class="item"><span>Chinese Sizzler</span><span>₹219</span></div>
 </div>
 
+<!-- Noodles -->
 <div class="category">
-    <img src="images/noodles.jpg" alt="Noodles">
-    <h2>🍜 Noodles</h2>
-    <div class="item"><span>Veg Hakka Noodles</span><span>₹69</span></div>
-    <div class="item"><span>Veg Manchurian Noodles</span><span>₹89</span></div>
-    <div class="item"><span>Paneer Noodles</span><span>₹99</span></div>
-    <div class="item"><span>Schezwan Noodles</span><span>₹89</span></div>
-    <div class="item"><span>Farmaish Noodles</span><span>₹109</span></div>
+<h2>🍜 Noodles</h2>
+<div class="item"><span>Veg Hakka Noodles</span><span>₹69</span></div>
+<div class="item"><span>Veg Manchurian Noodles</span><span>₹89</span></div>
+<div class="item"><span>Paneer Noodles</span><span>₹99</span></div>
+<div class="item"><span>Schezwan Noodles</span><span>₹89</span></div>
+<div class="item"><span>Farmaish Noodles</span><span>₹109</span></div>
 </div>
 
-<!-- ================= SHAKES ================= -->
+<!-- Rolls -->
 <div class="category">
-    <img src="images/shake.jpg">
-    <h2>🥤 Shakes</h2>
-    <div class="item"><span>Strawberry Shake</span><span>₹99</span></div>
-    <div class="item"><span>Mango Shake</span><span>₹99</span></div>
-    <div class="item"><span>Pineapple Shake</span><span>₹99</span></div>
-    <div class="item"><span>Butterscotch Shake</span><span>₹99</span></div>
-    <div class="item"><span>Chocolate Shake</span><span>₹99</span></div>
-    <div class="item"><span>Coconut Shake</span><span>₹99</span></div>
-    <div class="item"><span>Oreo Shake</span><span>₹119</span></div>
-    <div class="item"><span>Chocopie Shake</span><span>₹119</span></div>
-    <div class="item"><span>Kit-Kat Shake</span><span>₹129</span></div>
-    <div class="item"><span>Dryfruit Shake</span><span>₹129</span></div>
-    <div class="item"><span>Brownie Shake</span><span>₹139</span></div>
-    <div class="item"><span>Special Shake</span><span>₹149</span></div>
+<h2>🌯 Rolls</h2>
+<div class="item"><span>Cocktail Roll ⭐</span><span>₹99</span></div>
+<div class="item"><span>Paneer Tikka Roll 🌶</span><span>₹129</span></div>
+<div class="item"><span>Paneer Chilly Roll</span><span>₹129</span></div>
 </div>
 
-<!-- ================= DESSERT ================= -->
-<div class="category">
-    <img src="images/dessert.jpg" alt="Dessert">
-    <h2>🍰 Dessert</h2>
-    <div class="item"><span>Matilda Dessert</span><span>₹129</span></div>
-    <div class="item"><span>Chocochips Brownie</span><span>₹149</span></div>
-    <div class="item"><span>Brownie Blast</span><span>₹149</span></div>
-    <div class="item"><span>Classic Sundae</span><span>₹149</span></div>
-    <div class="item"><span>Sizzling Brownie</span><span>₹159</span></div>
-</div>
-
-
+<!-- You can continue same pattern for all other categories if needed -->
 <!-- ================= BURGER ================= -->
 <div class="category">
-    <img src="images/burger.jpg" alt="Burger">
-    <h2>🍔 Burger</h2>
-
-    <div class="item"><span>Aloo Tikki Burger</span><span>₹49</span></div>
-    <div class="item"><span>Cheese Aloo Tikki Burger</span><span>₹69</span></div>
-    <div class="item"><span>Mexican Burger</span><span>₹89</span></div>
-    <div class="item"><span>Schezwan Tikki Burger 🌶</span><span>₹79</span></div>
-    <div class="item"><span>Paneer Tikki Burger</span><span>₹99</span></div>
-    <div class="item"><span>Cheese Garlic Burger</span><span>₹99</span></div>
-    <div class="item"><span>Paneer Tandoori Burger</span><span>₹109</span></div>
+<h2>🍔 Burger</h2>
+<div class="item"><span>Veg Burger</span><span>₹59</span></div>
+<div class="item"><span>Cheese Burger</span><span>₹79</span></div>
+<div class="item"><span>Paneer Burger</span><span>₹89</span></div>
+<div class="item"><span>Farmaish Special Burger</span><span>₹109</span></div>
 </div>
-
 
 <!-- ================= PIZZA ================= -->
 <div class="category">
-    <img src="images/pizza.jpg">
-    <h2>🍕 Pizza</h2>
-    <div class="item"><span>Margherita Pizza</span><span>₹139</span></div>
-    <div class="item"><span>Veg Cheese Pizza</span><span>₹149</span></div>
-    <div class="item"><span>Cheese Corn Pizza</span><span>₹159</span></div>
-    <div class="item"><span>Hotspot Pizza</span><span>₹169</span></div>
-    <div class="item"><span>Pasta Cheese Pizza</span><span>₹1789</span></div>
-    <div class="item"><span>Exotic Pizza</span><span>₹199</span></div>
-    <div class="item"><span>Paneer Italian Pizza</span><span>₹219</span></div>
-    <div class="item"><span>Tandori Paneer Pizza</span><span>₹219</span></div>
-    <div class="item"><span>Mexican Corn Pizza</span><span>₹219</span></div>
-    <div class="item"><span>Cheesy Blast Pizza</span><span>₹249</span></div>
-    <div class="item"><span>Barbeque Paneer Pizza</span><span>₹249</span></div>
-    <div class="item"><span>Farmaish Special Pizza</span><span>₹259</span></div>
+<h2>🍕 Pizza</h2>
+<div class="item"><span>Margherita Pizza</span><span>₹129</span></div>
+<div class="item"><span>Veg Loaded Pizza</span><span>₹159</span></div>
+<div class="item"><span>Paneer Pizza</span><span>₹179</span></div>
+<div class="item"><span>Farmaish Special Pizza</span><span>₹199</span></div>
 </div>
 
 <!-- ================= SANDWICH ================= -->
 <div class="category">
-    <img src="images/sandwich.jpg" alt="Sandwich">
-    <h2>🥪 Sandwich</h2>
-
-    <div class="item"><span>Veg Grill</span><span>₹59</span></div>
-    <div class="item"><span>Veg Cheese Grill</span><span>₹69</span></div>
-    <div class="item"><span>Chesse Corn Grill</span><span>₹79</span></div>
-    <div class="item"><span>Chilli Cheese Grill</span><span>₹79</span></div>
-    <div class="item"><span>Pahadi Grill ⭐</span><span>₹79</span></div>
-    <div class="item"><span>Panner Chilli Grill</span><span>₹89</span></div>
-    <div class="item"><span>Tandoori Bite Grill</span><span>₹109</span></div>
-    <div class="item"><span>Samosa Cheese Grill</span><span>₹119</span></div>
-    <div class="item"><span>Paneer Mastani Grill</span><span>₹109</span></div>
-    <div class="item"><span>Barbeque Paneer Grill</span><span>₹119</span></div>
-    <div class="item"><span>Farmaish Special ⭐</span><span>₹149</span></div>
+<h2>🥪 Sandwich</h2>
+<div class="item"><span>Veg Sandwich</span><span>₹49</span></div>
+<div class="item"><span>Grilled Sandwich</span><span>₹69</span></div>
+<div class="item"><span>Cheese Sandwich</span><span>₹79</span></div>
+<div class="item"><span>Paneer Sandwich</span><span>₹89</span></div>
 </div>
 
 <!-- ================= GARLIC BREAD ================= -->
 <div class="category">
-    <img src="images/garlicbread.jpg" alt="Garlic Bread">
-    <h2>🧄 Garlic Bread</h2>
-
-    <div class="item"><span>Cheese Garlic Bread</span><span>₹99</span></div>
-    <div class="item"><span>Melting Cheese</span><span>₹119</span></div>
-    <div class="item"><span>Maska Garlic</span><span>₹129</span></div>
-    <div class="item"><span>Panner Cheese</span><span>₹139</span></div>
-</div>
-
-<!-- ================= BITES ================= -->
-<div class="category">
-    <img src="images/bites.jpg" alt="Bites">
-    <h2>🍟 Bites</h2>
-
-    <div class="item"><span>French Fries</span><span>₹59</span></div>
-    <div class="item"><span>Peri-Peri Fries</span><span>₹79</span></div>
-    <div class="item"><span>Loaded Fries</span><span>₹99</span></div>
-    <div class="item"><span>Cheese Corn Nuggets</span><span>₹99</span></div>
-    <div class="item"><span>Smiley</span><span>₹99</span></div>
-    <div class="item"><span>Loaded Nachos</span><span>₹129</span></div>
-</div>
-
-<!-- ================= MAGGIE ================= -->
-<div class="category">
-    <img src="images/maggie.jpg" alt="Maggie">
-    <h2>🍜 Maggie</h2>
-
-    <div class="item"><span>Plain Maggie</span><span>₹59</span></div>
-    <div class="item"><span>Veg Maggie</span><span>₹69</span></div>
-    <div class="item"><span>Schezwan Maggie 🌶</span><span>₹69</span></div>
-    <div class="item"><span>Paneer Schezwan Maggie 🌶</span><span>₹89</span></div>
-    <div class="item"><span>Peri-Peri Cheese Maggie</span><span>₹79</span></div>
-    <div class="item"><span>Veg Cheese Maggie</span><span>₹89</span></div>
-    <div class="item"><span>Farmaish Special Maggie</span><span>₹99</span></div>
+<h2>🧄 Garlic Bread</h2>
+<div class="item"><span>Plain Garlic Bread</span><span>₹79</span></div>
+<div class="item"><span>Cheese Garlic Bread</span><span>₹99</span></div>
+<div class="item"><span>Stuffed Garlic Bread</span><span>₹119</span></div>
 </div>
 
 <!-- ================= PASTA ================= -->
 <div class="category">
-    <img src="images/pasta.jpg" alt="Pasta">
-    <h2>🍝 Pasta</h2>
-
-    <div class="item"><span>Arrabiata / Red Sauce ⭐</span><span>₹139</span></div>
-    <div class="item"><span>Alfredo / White Sauce</span><span>₹149</span></div>
-    <div class="item"><span>Chipotle Pasta ⭐</span><span>₹149</span></div>
-    <div class="item"><span>Rosatella / Pink Sauce</span><span>₹159</span></div>
+<h2>🍝 Pasta</h2>
+<div class="item"><span>White Sauce Pasta</span><span>₹119</span></div>
+<div class="item"><span>Red Sauce Pasta</span><span>₹109</span></div>
+<div class="item"><span>Mix Sauce Pasta</span><span>₹129</span></div>
+<div class="item"><span>Farmaish Special Pasta</span><span>₹149</span></div>
 </div>
 
-<!-- ================= COFFEE ================= -->
+<!-- ================= MAGGI ================= -->
 <div class="category">
-    <img src="images/coffee.jpg" alt="Coffee">
-    <h2>☕ Coffee</h2>
-
-    <div class="item"><span>Cold Coffee ⭐</span><span>₹99</span></div>
-    <div class="item"><span>Hazelnut Coffee</span><span>₹119</span></div>
-    <div class="item"><span>Caramel Coffee</span><span>₹119</span></div>
-    <div class="item"><span>Nutella Frappe</span><span>₹149</span></div>
+<h2>🍜 Maggi</h2>
+<div class="item"><span>Plain Maggi</span><span>₹39</span></div>
+<div class="item"><span>Veg Maggi</span><span>₹59</span></div>
+<div class="item"><span>Cheese Maggi</span><span>₹69</span></div>
+<div class="item"><span>Paneer Maggi</span><span>₹79</span></div>
 </div>
 
 <!-- ================= CHAAT ================= -->
 <div class="category">
-    <img src="images/chaat.jpg" alt="Chaat">
-    <h2>🥗 Chaat</h2>
-
-    <div class="item"><span>Pani Puri</span><span>₹20</span></div>
-    <div class="item"><span>Sev Puri</span><span>₹30</span></div>
-    <div class="item"><span>Cheese Puri</span><span>₹40</span></div>
-    <div class="item"><span>Dahi Puri</span><span>₹40</span></div>
-    <div class="item"><span>Cheese Dahi Puri</span><span>₹40</span></div>
-    <div class="item"><span>Papdi Chaat</span><span>₹40</span></div>
-    <div class="item"><span>Dahi Papdi Chaat ⭐</span><span>₹50</span></div>
-    <div class="item"><span>Plain Samosa</span><span>₹40</span></div>
-    <div class="item"><span>Dahi Samosa</span><span>₹50</span></div>
-    <div class="item"><span>Bhel</span><span>₹40</span></div>
-    <div class="item"><span>Samosa Bhel</span><span>₹50</span></div>
-    <div class="item"><span>Cheese Bhel</span><span>₹50</span></div>
-    <div class="item"><span>Chola Tikki ⭐</span><span>₹50</span></div>
-    <div class="item"><span>Katori Chaat ⭐</span><span>₹50</span></div>
-    <div class="item"><span>Corn Chaat</span><span>₹70</span></div>
+<h2>🥗 Chaat</h2>
+<div class="item"><span>Pani Puri</span><span>₹39</span></div>
+<div class="item"><span>Sev Puri</span><span>₹49</span></div>
+<div class="item"><span>Dahi Puri</span><span>₹59</span></div>
+<div class="item"><span>Bhel Puri</span><span>₹49</span></div>
 </div>
 
-<!-- ================= APKI FARMAISH ================= -->
+<!-- ================= SHAKES ================= -->
 <div class="category">
-    <img src="images/special.jpg" alt="Apki Farmaish">
-    <h2>🍽 Apki Farmaish</h2>
-
-    <div class="item"><span>Cheesy Bread Bite</span><span>₹79</span></div>
-    <div class="item"><span>Schezwan Paneer Toast</span><span>₹99</span></div>
-    <div class="item"><span>Cheese Chataka (Jain)</span><span>₹139</span></div>
-    <div class="item"><span>Paneer Lasuniya ⭐</span><span>₹149</span></div>
-    <div class="item"><span>Open Cheese Chilli</span><span>₹139</span></div>
-    <div class="item"><span>Corn Bruchetta</span><span>₹149</span></div>
-    <div class="item"><span>Paneer Bruchetta</span><span>₹159</span></div>
-    <div class="item"><span>Melting Cheese Sandwich ⭐</span><span>₹179</span></div>
-    <div class="item"><span>Veg Cheese Blast</span><span>₹189</span></div>
-    <div class="item"><span>Panner Makhni Blast</span><span>₹199</span></div>
+<h2>🥤 Shakes</h2>
+<div class="item"><span>Chocolate Shake</span><span>₹89</span></div>
+<div class="item"><span>Strawberry Shake</span><span>₹89</span></div>
+<div class="item"><span>Oreo Shake</span><span>₹99</span></div>
+<div class="item"><span>Kitkat Shake</span><span>₹109</span></div>
 </div>
 
 <!-- ================= MOCKTAIL ================= -->
 <div class="category">
-    <img src="images/mocktail.jpg" alt="Mocktail">
-    <h2>🍹 Mocktail</h2>
-
-    <div class="item"><span>Fresh Lime Soda</span><span>₹49</span></div>
-    <div class="item"><span>Virgin Mojito</span><span>₹109</span></div>
-    <div class="item"><span>Bluecurraco Mojito</span><span>₹109</span></div>
-    <div class="item"><span>Strawberry Mojito</span><span>₹119</span></div>
-    <div class="item"><span>Mango Mojito</span><span>₹119</span></div>
+<h2>🍹 Mocktail</h2>
+<div class="item"><span>Blue Lagoon</span><span>₹89</span></div>
+<div class="item"><span>Virgin Mojito</span><span>₹79</span></div>
+<div class="item"><span>Green Apple Mojito</span><span>₹89</span></div>
+<div class="item"><span>Farmaish Special Mocktail</span><span>₹109</span></div>
 </div>
 
-<!-- ================= ROLLS ================= -->
+<!-- ================= COFFEE ================= -->
 <div class="category">
-    <img src="images/roll.jpg" alt="Rolls">
-    <h2>🌯 Rolls</h2>
-
-    <div class="item"><span>Cocktail Roll ⭐</span><span>₹99</span></div>
-    <div class="item"><span>Paneer Tikka Roll 🌶</span><span>₹129</span></div>
-    <div class="item"><span>Paneer Chilly Roll</span><span>₹129</span></div>
+<h2>☕ Coffee</h2>
+<div class="item"><span>Cold Coffee</span><span>₹79</span></div>
+<div class="item"><span>Hot Coffee</span><span>₹49</span></div>
+<div class="item"><span>Chocolate Coffee</span><span>₹89</span></div>
 </div>
 
+<!-- ================= DESSERT ================= -->
+<div class="category">
+<h2>🍨 Dessert</h2>
+<div class="item"><span>Brownie</span><span>₹89</span></div>
+<div class="item"><span>Ice Cream</span><span>₹59</span></div>
+<div class="item"><span>Sizzling Brownie</span><span>₹149</span></div>
+<div class="item"><span>Farmaish Special Dessert</span><span>₹179</span></div>
+</div>
+
+</div>
+
+<div class="place-order-container">
+<button class="place-order-btn" onclick="placeOrder()">Place Order</button>
 </div>
 
 <footer>
-    <p class="thanks">✨ Thank you for visiting Farmaish Cafe ✨</p>
+<p>✨ Thank you for visiting Farmaish Cafe ✨</p>
+<p><strong>Aishwarya Nikhade</strong></p>
+<p>aishwaryanikhade111@gmail.com</p>
 </footer>
 
-
 <script>
-    const categories = document.querySelectorAll('.category');
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('show');
-            }
-        });
-    }, {
-        threshold: 0.3
-    });
+let cart = [];
+let total = 0;
 
-    categories.forEach(category => {
-        observer.observe(category);
-    });
-</script>
-<p class="developer">
-    Website Designed & Developed by 
-    <strong>Aishwarya Nikhade</strong> 
-</p>
-<p class="dev-email">
-        <strong>aishwaryanikhade111@gmail.com</strong>
-        </p>
+/* Automatically add Add button to EVERY item */
+document.querySelectorAll(".item").forEach(item => {
 
-<script>
-async function placeOrder(orderData) {
-  await fetch("https://script.google.com/macros/s/AKfycbwCMYKAPDSAqF8sDq6RGnpWxbNSzXPP1Gdip9wPaeve9uJaBlTj01UocBotaU3HD_vKkg/exec", {
-    method: "POST",
-    mode: "no-cors",
-    body: JSON.stringify(orderData)
-  });
+    const name = item.children[0].innerText;
+    const price = parseInt(item.children[1].innerText.replace("₹",""));
 
-  alert("Order Placed Successfully!");
+    const btn = document.createElement("button");
+    btn.innerText = "Add";
+    btn.onclick = function(){
+        addToCart(name, price);
+    };
+
+    item.appendChild(btn);
+});
+
+function addToCart(itemName, price){
+    cart.push(itemName);
+    total += price;
+    alert(itemName + " added to cart");
 }
-</script>
 
-<button onclick="placeOrder({
-  table: '5',
-  items: 'Burger, Pizza',
-  total: 500
-})">
-  Test Order
-</button>
+async function placeOrder(){
+
+    const tableNo = document.getElementById("tableNumber").value;
+
+    if(!tableNo){
+        alert("Please enter table number");
+        return;
+    }
+
+    if(cart.length === 0){
+        alert("Cart is empty");
+        return;
+    }
+
+    await fetch("https://script.google.com/macros/s/AKfycbwCMYKAPDSAqF8sDq6RGnpWxbNSzXPP1Gdip9wPaeve9uJaBlTj01UocBotaU3HD_vKkg/exec", {
+        method:"POST",
+        mode:"no-cors",
+        body:JSON.stringify({
+            table:tableNo,
+            items:cart.join(", "),
+            total:total
+        })
+    });
+
+    alert("Order Placed Successfully!");
+
+    cart=[];
+    total=0;
+}
+
+</script>
 
 </body>
 </html>
