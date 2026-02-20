@@ -261,8 +261,12 @@ footer{
 
 </div>
 
-<div class="place-order-container">
-<button class="place-order-btn" onclick="placeOrder()">Place Order</button>
+
+<!-- CART SECTION -->
+<div id="cartPanel" class="category">
+    <h2>🛒 Your Cart</h2>
+    <div id="cartItems"></div>
+    <button class="place-order-btn" onclick="placeOrder()">Place Order</button>
 </div>
 
 <footer>
@@ -272,33 +276,111 @@ footer{
 </footer>
 
 <script>
+let cart = {};
 
-let cart = [];
-let total = 0;
-
-/* Automatically add Add button to EVERY item */
 document.querySelectorAll(".item").forEach(item => {
 
     const name = item.children[0].innerText;
     const price = parseInt(item.children[1].innerText.replace("₹",""));
 
-    const btn = document.createElement("button");
-    btn.innerText = "Add";
-    btn.onclick = function(){
-        addToCart(name, price);
+    const addBtn = document.createElement("button");
+    addBtn.innerText = "Add";
+
+    addBtn.onclick = () => {
+        addBtn.remove();
+
+        let qty = 1;
+
+        const qtyBox = document.createElement("div");
+        qtyBox.className = "qty-box";
+
+        const minus = document.createElement("button");
+        minus.innerText = "−";
+
+        const count = document.createElement("span");
+        count.innerText = qty;
+
+        const plus = document.createElement("button");
+        plus.innerText = "+";
+
+        const addCart = document.createElement("button");
+        addCart.innerText = "Add to Cart";
+        addCart.className = "add-cart-btn";
+
+        minus.onclick = () => {
+            if(qty > 1){
+                qty--;
+                count.innerText = qty;
+            }
+        };
+
+        plus.onclick = () => {
+            qty++;
+            count.innerText = qty;
+        };
+
+        addCart.onclick = () => {
+            cart[name] = { price, qty };
+            renderCart();
+            alert(name + " added to cart");
+        };
+
+        qtyBox.append(minus, count, plus);
+        item.append(qtyBox, addCart);
     };
 
-    item.appendChild(btn);
+    item.appendChild(addBtn);
 });
 
-function addToCart(itemName, price){
-    cart.push(itemName);
-    total += price;
-    alert(itemName + " added to cart");
+
+function renderCart(){
+    const cartItems = document.getElementById("cartItems");
+    cartItems.innerHTML = "";
+
+    let total = 0;
+
+    Object.keys(cart).forEach(itemName => {
+        const { price, qty } = cart[itemName];
+        total += price * qty;
+
+        const div = document.createElement("div");
+        div.className = "item";
+
+        const nameSpan = document.createElement("span");
+        nameSpan.innerText = `${itemName} × ${qty}`;
+
+        const priceSpan = document.createElement("span");
+        priceSpan.innerText = `₹${price * qty}`;
+
+        const deleteBtn = document.createElement("button");
+        deleteBtn.innerText = "DELETE";
+        deleteBtn.style.background = "red";
+        deleteBtn.style.marginLeft = "10px";
+
+        deleteBtn.onclick = () => {
+            delete cart[itemName];
+            renderCart();
+        };
+
+        const rightBox = document.createElement("div");
+        rightBox.style.display = "flex";
+        rightBox.style.alignItems = "center";
+        rightBox.append(priceSpan, deleteBtn);
+
+        div.append(nameSpan, rightBox);
+        cartItems.appendChild(div);
+    });
+
+    if(Object.keys(cart).length > 0){
+        const totalDiv = document.createElement("div");
+        totalDiv.style.fontWeight = "600";
+        totalDiv.style.marginTop = "10px";
+        totalDiv.innerText = "Total: ₹" + total;
+        cartItems.appendChild(totalDiv);
+    }
 }
 
 async function placeOrder(){
-
     const tableNo = document.getElementById("tableNumber").value;
 
     if(!tableNo){
@@ -306,26 +388,34 @@ async function placeOrder(){
         return;
     }
 
-    if(cart.length === 0){
+    if(Object.keys(cart).length === 0){
         alert("Cart is empty");
         return;
+    }
+
+    let items = [];
+    let total = 0;
+
+    for(let i in cart){
+        items.push(`${i} × ${cart[i].qty}`);
+        total += cart[i].price * cart[i].qty;
     }
 
     await fetch("https://script.google.com/macros/s/AKfycbwCMYKAPDSAqF8sDq6RGnpWxbNSzXPP1Gdip9wPaeve9uJaBlTj01UocBotaU3HD_vKkg/exec", {
         method:"POST",
         mode:"no-cors",
         body:JSON.stringify({
-            table:tableNo,
-            items:cart.join(", "),
-            total:total
+            table: tableNo,
+            items: items.join(", "),
+            total: total
         })
     });
 
     alert("Order Placed Successfully!");
-
-    cart=[];
-    total=0;
+    cart = {};
+    location.reload();
 }
+
 
 </script>
 
