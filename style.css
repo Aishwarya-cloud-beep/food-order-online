@@ -283,3 +283,123 @@ footer {
 .dev-email strong {
     color: #2d6a4f;
 }
+
+.qty-box {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.qty-box button {
+    background: #ff7a00;
+    color: white;
+    border: none;
+    padding: 4px 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.qty-box span {
+    min-width: 18px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.add-cart-btn {
+    background: #2d6a4f;
+    margin-left: 8px;
+}
+
+.add-cart-btn:hover {
+    background: #1b4332;
+}
+
+#bottomCart {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    border-top: 2px solid #ddd;
+    padding: 12px;
+    display: none;
+    box-shadow: 0 -6px 15px rgba(0,0,0,0.15);
+    z-index: 999;
+}
+
+#bottomCartItems {
+    max-height: 140px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+}
+
+#bottomCartItems .item {
+    font-size: 14px;
+}
+
+#bottomCart .place-order-btn {
+    width: 100%;
+}
+
+#viewCartBar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    border-top: 2px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    z-index: 999;
+}
+
+#viewCartBar button {
+    background: #ff7a00;
+    color: white;
+    border: none;
+    padding: 14px;
+    width: 100%;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#cartPanel {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    padding: 15px;
+    display: none;
+    max-height: 70vh;
+    overflow-y: auto;
+    box-shadow: 0 -6px 20px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+#cartPanel h2 {
+    margin-bottom: 10px;
+}
+
+#cartItems .item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+#cartPanel{
+    margin-top: 30px;
+}
+
+#cartItems .item{
+    display:flex;
+    justify-content:space-between;
+    padding:6px 0;
+    font-size:14px;
+}
+.item button{
+    font-size:14px;
+}
