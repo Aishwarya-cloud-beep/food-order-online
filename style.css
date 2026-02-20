@@ -403,3 +403,105 @@ footer {
 .item button{
     font-size:14px;
 }
+
+
+
+/* Item name */
+.category .item span:first-child {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Price column */
+.category .item span:nth-child(2) {
+    text-align: right;
+    font-weight: 600;
+    color: #1b4332;
+}
+.qty-box {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: nowrap;
+}
+
+.qty-box button {
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    font-size: 18px;
+}
+
+.qty-box span {
+    min-width: 22px;
+    text-align: center;
+}
+
+.add-cart-btn {
+    white-space: nowrap;
+    padding: 6px 12px;
+}
+/* ✅ PERFECT SINGLE-LINE MENU ITEM LAYOUT */
+.category .item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Item name */
+.category .item span:first-child {
+    flex: 1;                 /* takes remaining space */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Price */
+.category .item span:nth-child(2) {
+    min-width: 60px;
+    text-align: right;
+    font-weight: 600;
+    color: #1b4332;
+}
+/* ===== FIX PRICE ALIGNMENT (2-LINE ITEM LAYOUT) ===== */
+
+.category .item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+/* Top row: name + price */
+.category .item > span {
+    display: inline-block;
+}
+
+/* Name + price row */
+.category .item span:first-child {
+    float: left;
+    max-width: 70%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.category .item span:nth-child(2) {
+    float: right;
+    font-weight: 600;
+    color: #1b4332;
+}
+
+/* Clear floats */
+.category .item::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* Bottom row: buttons */
+.category .item .qty-box,
+.category .item .add-cart-btn,
+.category .item button {
+    margin-top: 6px;
+}
